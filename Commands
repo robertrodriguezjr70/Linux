@@ -183,7 +183,7 @@
  # /etc/sysconfig/iptables-config <--firewal
  # /etc/firwalld/firewalld.conf <-- firewall w/GUI
  # /etc/openldap/slap.d/
-
+ # /etc/motd
  
  
  
