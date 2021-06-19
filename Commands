@@ -1,0 +1,204 @@
+# Commands to execute at startup
+  # sudo updatedb
+  # script <file.log> <-- logs all commands here after typing script
+
+# CentOS/Redhat release verion
+ # /etc/redhat-release
+  
+
+# Services
+  # systemctl list-units --type=service --state=running <-- list services
+  # systemctl --type=service|grep -i <servicename>
+  # systemctl status/start/stop/restart cups.service
+  # chronyd.service <-- ntp servicec
+  # ssh user@xxxx.xxxx.xxxx.xxxx
+  # systemctl is-enabled or is-disabled <service name> <-- check to see if service will auto start after reboot
+  
+# system monitorying
+ # top
+ # ps -ef
+ # df -h
+ # du -h
+ # free -t
+ # iostat 1
+ # netstat -rnv    <-- network info
+ # netstat -atu     <-- listening tcp/udp connections
+ # netstat -tunlp   <-- listening ports
+ # cat /proc/cpuinfo
+ # cat /proc/meminfo
+ # uname -a
+ # dmidecode  <-- get systems hardware related information
+ # who -r  <-- run level
+ 
+#logging  Note: RSYSLOG reads the system-journald service, and puts logs into their respective log files
+  # Journalctl (example Journalctl|grep httd)
+  # service name - systemd-journald
+  # service name - rsyslog
+  # /etc/rsyslog.conf    
+  
+  
+ 
+# Important logs in /var/logs/
+ # boot
+ # chronyd (ntp)
+ # cron
+ # maillog
+ # secure
+ # messages
+ # httpd
+ 
+# Crontab
+  # crontab -l
+  # crontab -e
+  
+  # nohup mycommand &
+
+# Network
+  # ifup <name>
+  # ifdown <name>
+  # ifconfig <NIC> Down/Up
+  # netstat -ie
+  # netstat -rnv
+  # traceroute <domain name>
+  # tcpdump -i <interface name>
+  # /etc/nsswitch.cong
+  # /etc/hosts
+  # /etc/sysconfig/network
+  # /etc/sysconfig/network-scripts/ifcfg-nic
+  # /etc/resolv.conf
+  # ethtool <interface name>
+  # curl http://www.name.com
+  # curl -O https://www.name/file.txt  <-- to download a file
+  # /etc/sysconfig/network-script/ifcfg-nic
+  
+# DNS
+ # nslookup <domain>
+ # tracerout 
+ # dig 
+ 
+  # Purpose ?
+    # Hostname to IP        -  A Record
+    # IP to Hostname        -  PTR Record
+    # Hostname to Hostname  -  CNAME Record
+    
+# NTP now Chronyd
+  service name - chronyd
+  # /etc/chrony.conf
+  
+# Sendmail  
+
+  # files
+    # /etc/mail/sendmail.mc
+    #/etc/mail/sendmail.cf
+ 
+ # Service name  - sendmail
+ 
+ # Command
+    # mail -s "subject line" name@mydomain.lcom
+    
+# Package Managment
+    # rpm -qa| grep -i <software name>
+    # rpm -e <package name>  <-- remove package
+    
+  # Files ?
+    # /etc/named.conf
+    #/var/named <-- directory
+    
+  # Service
+    # systemctl status <service name>
+    # systemctl -a
+    
+  # firewall  
+   # firewall-config  <--gui for firewall
+   # service name - firewalld
+   # firewall-cmd
+
+
+# Data manipulation
+  # cut -c1-3 <filename>
+  # cut -d: -f 1 <etc/passwd>  <-- get list of user names *cut is used with a delimiter
+  # awk '{print $1}' <file>    <-- extracts data by column
+  # sed 's/old value/new value/g' Filename.txt > Filename.txt   <-- replace word with a new word. No change to original file, so put changes in a new file. 
+
+
+# ------------------------ User Management ------------------------------------------------------
+
+  #Files
+     # /etc/passwd
+     # /etc/group
+     #/etc/shadow
+     
+  # id <username>  <---   
+  # who -H <-- who's logged in
+  # last <- shows last users that were logged in
+  # w <-- similar to who
+  # finger <--
+  # adduser <username> <--- creates user with folders and prompts for passwrod
+  # userdd <username>
+  # chage -l <user name>  <-- lookup account info
+  # chage -E yyyy-mm-dd <username> <-- change account expire date
+  # /etc/login.defs <-- set login defaults
+  # /etc/pam.d/system-auth <--
+  # groupadd <group name>
+  # usermod -a -G <wheel> <username> <-- adding a user to the wheel group
+  # userdel -r <username> <--- deletes user and folder
+  # groupdel <groupname>
+  # usermod -G <groupname> <user>
+  
+  # sudo passwd <user>
+  # sudo usermod -L <username>  <-- lock user
+  # sudo usermond -U <username> <-- unlock user
+  # sudo passwd -S <username>  <--check if user is locked out
+  # sudo /etc/profile
+  # sudo /etc/batch.rc
+  # wall <-- write to all users logged in
+  # write <-- write to one user
+  # uptime
+  # hostname
+  # whoami
+  # w
+  # users
+  # getent passwd <user name>
+  
+     
+
+
+
+#-------------------------- Permissions ---------------------------------------------------------
+  # chmod - sudo chmod 467 <file name>
+  # chown - sudo chown <user name>:<group name> <file name>
+  # chgrp - sudo chgrp <group> <file name>
+  # getfacl <filename>
+  # stat <filename>
+  
+  # SSH
+    # ssh -l root 192.168.x.x.x
+    # ssh-keygen 
+    # ssh-copy-id root@1234.1234.1234.1
+    # /root/.ssh/authorized_keys  
+    #  ssh-keygen -R  xxxxxxxx.xxxx.xxxx  <-- use ssh-keygen to delete the invalid key
+  
+ # ----------------------- Config ----------------------------------------------------------
+ # /etc/ssh/sshd_config   <-- ssh config parms
+ # /etc/sysconfig/iptables-config <--firewal
+ # /etc/firwalld/firewalld.conf <-- firewall w/GUI
+ # /etc/openldap/slap.d/
+
+ 
+ 
+ 
+ 
+
+ 
+  
+
+
+
+
+# Finding files
+  # locate <filename>  Note:install mlocate? No results, run "updatedb" to update DB and help locate command find result fast?
+  # find <search path> -name <filename>
+  
+# top|grep -i <processname>
+# ps -e|grep -i <processname>
+# kill <pid>
