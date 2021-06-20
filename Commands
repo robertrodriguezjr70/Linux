@@ -74,7 +74,7 @@
 # DNS
  # nslookup <domain>
  # tracerout 
- # dig 
+ # dig +all
  
   # Purpose ?
     # Hostname to IP        -  A Record
@@ -133,7 +133,7 @@
      
   # id <username>  <---   
   # who -H <-- who's logged in
-  # last <- shows last users that were logged in
+  # last -5 <- shows last 5 users that were logged in
   # w <-- similar to who
   # finger <--
   # adduser <username> <--- creates user with folders and prompts for passwrod
