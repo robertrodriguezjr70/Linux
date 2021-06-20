@@ -97,8 +97,11 @@
     # mail -s "subject line" name@mydomain.lcom
     
 # Package Managment
-    # rpm -qa| grep -i <software name>
+    # rpm -qa| grep -i <package name>
     # rpm -e <package name>  <-- remove package
+    # yum  list installed
+    # yum remove <package name>
+    
     
   # Files ?
     # /etc/named.conf
