@@ -117,6 +117,21 @@
    # service name - firewalld
    # firewall-cmd
 
+# NFS (Network File System) is part of NAS(Network Attached Storage)
+  # related services
+    ** enable rpcbind and nfs-server to auto start at reboot
+    # rpcbind
+    # nfs-server
+    # rpc-statd
+    # nfs-idmapd
+
+
+
+# Samba
+
+
+
+
 
 # Data manipulation
   # cut -c1-3 <filename>
@@ -176,6 +191,7 @@
   # stat <filename>
   
   # SSH
+    # service name - sshd
     # ssh -l root 192.168.x.x.x
     # ssh-keygen 
     # ssh-copy-id root@1234.1234.1234.1
