@@ -72,6 +72,25 @@
   # curl -O https://www.name/file.txt  <-- to download a file
   # /etc/sysconfig/network-script/ifcfg-nic
   
+# NFS (Network File System) is part of NAS(Network Attached Storage)
+  # Server side related services
+    ** enable rpcbind and nfs-server to auto start at reboot
+    # rpcbind
+    # nfs-server
+    # rpc-statd
+    # nfs-idmapd
+    
+  # Client side  related services
+    # rpcbind 
+  
+  # config
+    #/etc/exports - file to add new shared filesystem
+    
+
+
+
+# Samba
+  
 # DNS
  # nslookup <domain>
  # tracerout 
@@ -117,17 +136,7 @@
    # service name - firewalld
    # firewall-cmd
 
-# NFS (Network File System) is part of NAS(Network Attached Storage)
-  # related services
-    ** enable rpcbind and nfs-server to auto start at reboot
-    # rpcbind
-    # nfs-server
-    # rpc-statd
-    # nfs-idmapd
 
-
-
-# Samba
 
 
 
