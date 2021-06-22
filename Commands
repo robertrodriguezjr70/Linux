@@ -72,7 +72,7 @@
   # curl -O https://www.name/file.txt  <-- to download a file
   # /etc/sysconfig/network-script/ifcfg-nic
   
-# NFS (Network File System) is part of NAS(Network Attached Storage)
+# NTFS (Network File System) is part of NAS(Network Attached Storage)
   # Server side related services
     ** enable rpcbind and nfs-server to auto start at reboot
     # rpcbind
