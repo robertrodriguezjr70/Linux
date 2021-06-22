@@ -20,7 +20,7 @@
  # df -h
  # du -h
  # free -t
- # fdisk -l
+ # fdisk -l <--also known as format disk, used for view, create,delet,change,resize,copy,move partions on a hard drive
  # iostat 1
  # netstat -rnv    <-- network info
  # netstat -atu     <-- listening tcp/udp connections
