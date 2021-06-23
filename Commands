@@ -72,7 +72,8 @@
   # curl http://www.name.com
   # curl -O https://www.name/file.txt  <-- to download a file
   # /etc/sysconfig/network-script/ifcfg-nic
-  
+
+# ************************************ NFS Start **************************************************************
 # NFS (Network File System) is part of NAS(Network Attached Storage)
   # Server side related services
     ** enable rpcbind and nfs-server to auto start at reboot
@@ -88,10 +89,13 @@
   # config
     #/etc/exports - file to add new shared filesystem (part of NFS)
     
-
-
+# ************************************ NFS End ****************************************************************
 
 # Samba
+  
+# Mounting  
+  # mount xxxx.xxxx.xxxx.xxxx:/dir   /dir <-- Mounts dir from host to client
+  # unmount /dir/dir
   
 # DNS
  # nslookup <domain>
