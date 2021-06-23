@@ -19,7 +19,7 @@
  # ps -ef
  # df -h
  # du -h
- # free -t
+ # free -t  <-- info about pyisical and swap memory
  # fdisk -l <--also known as format disk, used for view, create,delet,change,resize,copy,move partions on a hard drive
  # iostat 1
  # netstat -rnv    <-- network info
