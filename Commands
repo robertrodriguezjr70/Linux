@@ -8,6 +8,7 @@
 
 # Services
   # systemctl list-units --type=service --state=running <-- list services
+  # systemctl list-unit-files | grep enabled
   # systemctl --type=service|grep -i <servicename>
   # systemctl status/start/stop/restart cups.service
   # chronyd.service <-- ntp servicec
