@@ -73,19 +73,20 @@
   # curl -O https://www.name/file.txt  <-- to download a file
   # /etc/sysconfig/network-script/ifcfg-nic
   
-# NTFS (Network File System) is part of NAS(Network Attached Storage)
+# NFS (Network File System) is part of NAS(Network Attached Storage)
   # Server side related services
     ** enable rpcbind and nfs-server to auto start at reboot
     # rpcbind
     # nfs-server
     # rpc-statd
     # nfs-idmapd
+    # showmount -e <IP address of NFS Server> <--command to see what dir is being shared
     
   # Client side  related services
     # rpcbind 
   
   # config
-    #/etc/exports - file to add new shared filesystem
+    #/etc/exports - file to add new shared filesystem (part of NFS)
     
 
 
