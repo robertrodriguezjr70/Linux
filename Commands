@@ -59,6 +59,7 @@
   # ifup <name>
   # ifdown <name>
   # ifconfig <NIC> Down/Up
+  # ip addr
   # netstat -ie
   # netstat -rnv
   # traceroute <domain name>
