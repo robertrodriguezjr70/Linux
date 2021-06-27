@@ -60,8 +60,11 @@
   # ifdown <name>
   # ifconfig <NIC> Down/Up
   # ip addr
+  # ip a
   # netstat -ie
   # netstat -rnv
+  # netstat -atu  <-- TCP/UDP port listing
+  # ss -l         <-- what ports are listening
   # traceroute <domain name>
   # tcpdump -i <interface name>
   # /etc/nsswitch.cong
