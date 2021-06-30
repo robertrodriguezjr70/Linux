@@ -33,7 +33,7 @@
  # who -r  <-- run level
  
 #logging  Note: RSYSLOG reads the system-journald service, and puts logs into their respective log files
-  # Journalctl (example Journalctl|grep httd)
+  # Journalctl (example Journalctl|grep httd)  <-- used to view systemd, kernal and journal logs
   # service name - systemd-journald
   # service name - rsyslog
   # /etc/rsyslog.conf    
