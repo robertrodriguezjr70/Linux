@@ -1,1 +1,2 @@
-sudo pip3 install <package_name>
+# sudo pip3 install <package_name>
+# pop3 list                          <-- shows installed packages
