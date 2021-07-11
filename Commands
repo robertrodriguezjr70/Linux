@@ -20,6 +20,7 @@
  # ps -ef
  # df -h
  # du -h
+ # du -sh <folder name>
  # free -t  <-- info about pyisical and swap memory
  # fdisk -l <--also known as format disk, used for view, create,delet,change,resize,copy,move partions on a hard drive
  # iostat 1
