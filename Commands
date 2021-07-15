@@ -4,7 +4,12 @@
 
 # CentOS/Redhat release verion
  # /etc/redhat-release
-  
+
+# Disk
+  # lsblk
+  # fdisk -l 
+  # mount 
+  # unmount 
 
 # Services
   # systemctl list-units --type=service --state=running <-- list services
