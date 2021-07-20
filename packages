@@ -1,6 +1,7 @@
-net-tools
-coreutils
-mlocate
-man
-bind-utils
+install net-tools
+install coreutils
+install mlocate
+install bind-utils
+install man man-pages
+install iputils
 
