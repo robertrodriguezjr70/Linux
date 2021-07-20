@@ -4,4 +4,5 @@ install mlocate
 install bind-utils
 install man man-pages
 install iputils
+install systemd-sysv     <-- systemctl
 
