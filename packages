@@ -1,3 +1,6 @@
 net-tools
 coreutils
 mlocate
+man
+bind-utils
+
