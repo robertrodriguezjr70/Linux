@@ -1,0 +1,7 @@
+sudo useradd <user name>
+sudo passwd <user name>
+sudo usemod -a -G <group name> <user name>    <-- add user to a group
+sudo id <use name>                            <-- verify groups
+
+sudo passwd -S <use name>                     <-- check to see if user is locked out
+sudo usermod -U <user name>                   <-- unlock user
