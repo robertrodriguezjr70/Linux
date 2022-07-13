@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Author:rrodriguez 
+# Note: You must run this script as root. Run script as  sudo ./archive_container_logs.sh
+
+
+# get full docker container names and put them in a temmp file
+docker ps --no-trunc | awk '{print $1}'  > hold_docker_container_names_tmp.txt
+
+# remove the first line in the temp file, and add continer names to file to be read as input down below.
+sed '1d' hold_docker_container_names_tmp.txt > hold_docker_container_names.txt
+
+# vars for containter log path, dir seperator, and log file extension
+container_log_file_path=/var/lib/docker/containers/
+container_sep=/
+container_log_file_extension=-json.log
+
+
+  while read container_name_in
+  
+  do
+    
+# combine the container name with dir seperator, and the log file extension
+concatenate=$container_log_file_path$container_name_in$container_sep$container_name_in$container_log_file_extension
+
+    if [ -e $concatenate ]
+    then
+      #log file found and copy to folder, then clear out the log file
+      cp $concatenate /home/ec2-user/DockerContainerLogs
+      truncate -s 0 $concatenate
+    else
+      echo file not found
+    fi
+  
+  done < hold_docker_container_names.txt
+
+
+
+# file clean-up
+rm  hold_docker_container_names_tmp.txt
+rm  hold_docker_container_names.txt
+
+
+# go to where the containers are stored
+#cd /var/lib/docker/containers/
+
+# for testing, the ct_sched container is hardcoded at this time
+#cd dc5ed3250679ace39031c230044e1116b63c42408380091ad2daf0d9e9e18037
+
+# for testing, copy hard coded container log by name log to home dir
+#sudo cp /var/lib/docker/containers/dc5ed3250679ace39031c230044e1116b63c42408380091ad2daf0d9e9e18037/dc5ed3250679ace39031c230044e1116b63c42408380091ad2daf0d9e9e18037-json.log /home/ec2-user/
+
+# rename log by adding service name in front of log 
+#mv dc5ed3250679ace39031c230044e1116b63c42408380091ad2daf0d9e9e18037-json.log ct_sched_dc5ed3250679ace39031c230044e1116b63c42408380091ad2daf0d9e9e18037-json.log
+#echo End of Script
