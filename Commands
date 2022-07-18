@@ -10,6 +10,10 @@
   # fdisk -l 
   # mount 
   # unmount 
+  
+# Backup
+  # tar cvf <path/backup.tar> </path/filename> </path/filename>
+  # tar cvf <path/backup.tar> </path> </path>
 
 # Services
   # systemctl list-units --type=service --state=running <-- list services
