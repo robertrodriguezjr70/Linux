@@ -204,6 +204,10 @@
   # users
   # getent passwd <user name>
   
+  ## example of command to find files older than 90 days
+  # find <path> -mtime +90 -exec ls -l {} \;
+  
+  
      
 
 
