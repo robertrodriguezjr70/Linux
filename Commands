@@ -210,6 +210,12 @@
   ## example of command to delete files older than 90 days
   # find <path> -mtime +90 -exec rm {} \;
   
+  ## example of command to delete files older than 90 days
+  # find <path> -mtime +90 -exec rm {} \;
+  
+  ## example of command to rename files older than 90 days with .old extension
+  # find <path> -mtime +90 -exec mv {} {}.old \;
+  
   
      
 
