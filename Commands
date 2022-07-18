@@ -159,9 +159,6 @@
 
 
 
-
-
-
 # Data manipulation
   # cut -c1-3 <filename>
   # cut -d: -f 1 <etc/passwd>  <-- get list of user names *cut is used with a delimiter
@@ -221,11 +218,7 @@
   # find <path> -mtime +90 -exec mv {} {}.old \;
   
   
-     
-
-
-
-#-------------------------- Permissions ---------------------------------------------------------
+ #-------------------------- Permissions ---------------------------------------------------------
   # chmod - sudo chmod 467 <file name>
   # chown - sudo chown <user name>:<group name> <file name>
   # chgrp - sudo chgrp <group> <file name>
@@ -248,12 +241,9 @@
  # /etc/motd
  
  
+# secure copy
+  # scp <path> <file> root@xxxx.xxxx.xxxx:/path
  
- 
-
- 
-  
-
 
 
 
