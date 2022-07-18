@@ -207,6 +207,9 @@
   ## example of command to find files older than 90 days
   # find <path> -mtime +90 -exec ls -l {} \;
   
+  ## example of command to delete files older than 90 days
+  # find <path> -mtime +90 -exec rm {} \;
+  
   
      
 
