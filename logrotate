@@ -1,0 +1,20 @@
+
+# Logrotate options in file
+ # /var/log/cron
+ # /var/log/maillog
+ # /var/log/messages
+ # /var/log/secure
+ # /var/log/spooler
+
+{
+
+# daily
+# rotate 7
+# missingok
+# notifempty
+# copytruncate
+}
+
+
+# force logrotate command for testing
+ # logrotate -v --force /etc/logrotate.d/<file to force run>
